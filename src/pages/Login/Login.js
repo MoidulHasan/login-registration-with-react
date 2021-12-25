@@ -43,6 +43,8 @@ function Login() {
         });
         localStorage.setItem('loginToken', data.token);
         await isLoggedIn();
+        window.location = '../';
+
       }
     else{
         setState({
