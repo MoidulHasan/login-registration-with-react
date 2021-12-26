@@ -5,7 +5,7 @@ export const UserContext = createContext();
 
 // Define the base URL
 const Axios = axios.create({
-    baseURL: 'http://localhost/Fiverr/help-scout/php-login-registration-api',
+    baseURL: 'http://localhost/Fiverr/help-scout-2/backend/',
 });
 
 class UserContextProvider extends Component{
@@ -53,7 +53,6 @@ class UserContextProvider extends Component{
             email: user.email,
             phone: user.phone,
             password: user.password,
-            retype_password: user.retype_password
         });
 
         return register.data;

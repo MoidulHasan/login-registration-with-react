@@ -54,7 +54,6 @@ function Register() {
           email:'',
           phone:'',
           password:'',
-          retype_password:'',
         },
         errorMsg:'',
         successMsg:'',
@@ -84,7 +83,7 @@ function Register() {
 
     // On change the Input Value (name, email, password)
     const onChangeValue = (e) => {
-      // console.log(state.userInfo);
+       console.log(state.userInfo);
         setState({
             ...state,
             userInfo:{
@@ -170,15 +169,7 @@ function Register() {
                   onChangeValue = {onChangeValue}
                   />
 
-                <LabelInput
-                  name='phone'  
-                  label="Phone number (optional)"
-                  value={state.userInfo.phone} 
-                  onChangeValue = {onChangeValue}
-                  wrapperClassName="mb-10px"
-                  value={state.userInfo.phone} 
-                  onChange={onChangeValue}
-                />
+               
 
                 <LabelInput
                   name='password'  
@@ -191,16 +182,33 @@ function Register() {
                   onChangeValue = {onChangeValue}
                   />
 
+
                 <LabelInput
-                  name='retype_password'  
-                  label="Confirmed Password"
-                  placeholder="Retype Password"
-                  type="password"
-                  hint="At least 8 characters"
-                  wrapperClassName="mb-10px"
-                  value={state.userInfo.retype_password} 
+                  name='phone'  
+                  label="Phone number (optional)"
+                  value={state.userInfo.phone} 
                   onChangeValue = {onChangeValue}
-                  />
+                  wrapperClassName="mb-10px"
+                  value={state.userInfo.phone} 
+                  onChange={onChangeValue}
+                />
+
+                  {/* <LabelInput
+                  name='phone'  
+                  value={state.userInfo.phone} 
+                  onChange={onChangeValue}
+
+                  label="Phone number (optional)"
+                  wrapperClassName="mb-10px"
+                  
+                  InputComponent={() => (
+                    <PhoneInput
+                      
+                      country={"us"}
+                      containerClass="containerClass"
+                    />
+                  )}
+                /> */}
 
                 {errorMsg}
                 {successMsg}
