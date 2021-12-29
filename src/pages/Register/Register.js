@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import "./Register.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { ReactComponent as GoogleIcon } from "assets/images/google-icon.svg";
 import { ReactComponent as RegisterImg1 } from "assets/images/register-img-1.svg";
 import { ReactComponent as RegisterBooksImg } from "assets/images/register-books-img.svg";
 import {UserContext} from "contexts/UserContext";
+import GoogleLogin from "components/GoogleLogin/GoogleLogin";
+
 
 const LabelInput = ({
   label,
@@ -126,7 +129,7 @@ function Register() {
                 Start Your Free Trial
               </p>
 
-              <ul className="free-trial-box mb-40px">
+              <ul className="free-trial-box mb-20px">
                 <li className="fs-14px dark-blue graphik-light">
                   15-day trial
                 </li>
@@ -135,8 +138,10 @@ function Register() {
                 </li>
               </ul>
 
-              <form onSubmit={submitForm} className="register-form mb-25px">
+                <GoogleLogin text={"Log in with Google"}/>
 
+              <form onSubmit={submitForm} className="register-form mb-25px">
+              
                 <LabelInput
                   name='first_name'  
                   label="First Name" 
@@ -212,6 +217,8 @@ function Register() {
 
                 {errorMsg}
                 {successMsg}
+
+                
 
                 <button className="register-btn pointer fs-14px white graphik-regular">
                   Get Your Account

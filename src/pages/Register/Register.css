@@ -211,3 +211,22 @@
     gap: 1rem;
   }
 }
+
+
+.google-login {
+  text-align: center;
+  width: 100%;
+  padding: 10px 12px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid #d5dce1;
+  transition: background-color 0.1s linear;
+}
+
+.google-login:hover {
+  background: #fff;
+  border-color: #b7c2cc;
+}

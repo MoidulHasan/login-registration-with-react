@@ -6,6 +6,8 @@ import messagePreviewImg from "assets/images/messages-preview.png";
 import { ReactComponent as GoogleIcon } from "assets/images/google-icon.svg";
 import Checkbox from "components/Checkbox/Checkbox";
 import { UserContext } from "contexts/UserContext";
+import GoogleLogin from "components/GoogleLogin/GoogleLogin";
+
 
 function Login() {
   const { loginUser, isLoggedIn } = useContext(UserContext);
@@ -134,10 +136,12 @@ function Login() {
                 <p className="light-blue fs-12px weight-4 text-center mb-10px">
                   or
                 </p>
-                <button className="google-login dark-blue mb-20px fs-14px graphik-regular pointer">
+
+                {/* <button className="google-login dark-blue mb-20px fs-14px graphik-regular pointer">
                   <GoogleIcon />
                   Sign in with Google
-                </button>
+                </button> */}
+                <GoogleLogin text={"Log in with Google"}/>
 
                 <a
                   href="#"

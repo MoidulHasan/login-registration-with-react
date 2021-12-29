@@ -6,7 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Pricing from "./pages/Pricing/Pricing";
+import Dashboard from "./pages/Dashboard/Dashboard";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import UserLogin from "pages/UserLogin/UserLogin";
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/userlogin" element={<UserLogin />} />
       </Routes>
     </Router>
     </UserContextProvider>
